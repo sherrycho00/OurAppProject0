@@ -58,10 +58,9 @@ public class LoginActivity extends FragmentActivity {
         sign.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                //select();
+                select();
 
-                Intent intent= new Intent(LoginActivity.this,MainActivity.class);
-                startActivity(intent);
+
             }
 
         });
@@ -150,17 +149,16 @@ public class LoginActivity extends FragmentActivity {
                 Toast.makeText(this, "用户验证成功", Toast.LENGTH_SHORT).show();
                 loginflag=1;
 
-//                //intent bundle传值
-//                Intent MainActivity = new Intent();
-//                MainActivity .setClass(LoginActivity.this,MainActivity.class);
-//                Bundle bundle = new Bundle(); //该类用作携带数据
-//                bundle.putString("user", user.getText().toString());
-//                MainActivity.putExtras(bundle);   //向MainActivity传值
-//                this.startActivity(MainActivity);
-//                finish();//退出
+                //intent bundle传值
+                Intent MainActivity = new Intent();
+                MainActivity .setClass(LoginActivity.this,MainActivity.class);
+                Bundle bundle = new Bundle(); //该类用作携带数据
+                bundle.putString("user", user.getText().toString());
+                MainActivity.putExtras(bundle);   //向MainActivity传值
+                this.startActivity(MainActivity);
+                finish();//退出
 
-                Intent intent= new Intent(LoginActivity.this,MainActivity.class);
-                startActivity(intent);
+
             }
 
 
