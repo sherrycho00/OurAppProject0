@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    tools:context="com.example.elsie.framelayout.LoginActivity">
+
+    <EditText
+        android:id="@+id/userpwd"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/username"
+        android:layout_centerHorizontal="true"
+        android:drawableLeft="@android:drawable/ic_lock_idle_lock"
+        android:ems="10"
+        android:hint="请输入密码"
+        android:inputType="textPassword"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="31dp"
+        tools:layout_editor_absoluteY="169dp" />
+
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:layout_alignLeft="@+id/userpwd"
+        android:layout_alignStart="@+id/userpwd"
+        android:layout_below="@+id/image_user"
+        android:layout_marginTop="49dp"
+        android:drawableLeft="@android:drawable/ic_menu_myplaces"
+        android:ems="10"
+        android:hint="请输入您的用户名"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="31dp"
+        tools:layout_editor_absoluteY="85dp" />
+
+    <Button
+        android:id="@+id/register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/userpwd"
+        android:layout_alignRight="@+id/userpwd"
+        android:layout_below="@+id/username"
+        android:layout_marginEnd="31dp"
+        android:layout_marginRight="31dp"
+        android:layout_marginTop="75dp"
+        android:backgroundTint="@android:color/holo_blue_light"
+        android:drawableLeft="@drawable/login1"
+        android:text="注册"
+        tools:layout_editor_absoluteX="212dp"
+        tools:layout_editor_absoluteY="292dp" />
+
+    <Button
+        android:text="登录"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/login"
+        android:elevation="0dp"
+
+        tools:layout_editor_absoluteY="292dp"
+        tools:layout_editor_absoluteX="62dp"
+        android:layout_alignBaseline="@+id/register"
+        android:layout_alignBottom="@+id/register"
+        android:layout_toLeftOf="@+id/register"
+        android:layout_toStartOf="@+id/register"
+        android:layout_marginRight="24dp"
+        android:layout_marginEnd="24dp" />
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/image_user"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="41dp"
+        android:src="@drawable/user"
+        app:riv_border_color="#333333"
+        app:riv_border_width="2dp"
+        app:riv_oval="true" />
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/gif"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        fresco:placeholderImage="@drawable/hello"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/image_user"
+        android:layout_toStartOf="@+id/image_user"
+        android:layout_marginRight="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="20dp" />
+
+</RelativeLayout>
