@@ -15,6 +15,8 @@ import android.widget.TextView;
 
 import static com.example.elsie.framelayout.R.color.black;
 import static com.example.elsie.framelayout.R.color.blue;
+import static com.example.elsie.framelayout.R.color.material_blue_grey_800;
+import static com.example.elsie.framelayout.R.color.material_grey_50;
 
 public class  MainActivity extends FragmentActivity implements View.OnClickListener{
 
@@ -95,22 +97,25 @@ public class  MainActivity extends FragmentActivity implements View.OnClickListe
             case R.id.tab_home:
                 setSelect(0);
                 mTxvHome.setTextColor(0xff1B940A);
-                mImagHome.setImageResource(R.drawable.hello);
+                mImagHome.setImageResource(R.drawable.home);
                 break;
 
             case R.id.tab_chat:
                 setSelect(1);
-
+                mTxvChat.setTextColor(0xff1B940A);
+                mImagChat.setImageResource(R.drawable.chat);
                 break;
 
             case R.id.tab_rank:
                 setSelect(2);
-
+                mTxvRank.setTextColor(0xff1B940A);
+                mImagRank.setImageResource(R.drawable.rank);
                 break;
 
             case R.id.tab_setting:
                 setSelect(3);
-
+                mTxvSetting.setTextColor(0xff1B940A);
+                mImagSetting.setImageResource(R.drawable.me);
                 break;
 
             default:
@@ -199,16 +204,16 @@ public class  MainActivity extends FragmentActivity implements View.OnClickListe
 
 //    点击后图标发生变化
     private void resetImg() {
-        mImagHome.setImageResource(R.drawable.login1);
-        mTxvHome.setTextColor(black);
+        mImagHome.setImageResource(R.drawable.grayhome);
+        mTxvHome.setTextColor(material_grey_50);
 
-//        mImagChat.setImageResource();
-//        mTxvChat.setTextColor(black);
-//
-//        mImagRank.setImageResource();
-//        mTxvRank.setTextColor(black);
-//
-//        mImagSetting.setImageResource();
-//        mTxvSetting.setTextColor(black);
+        mImagChat.setImageResource(R.drawable.graychat);
+        mTxvChat.setTextColor(material_grey_50);
+
+        mImagRank.setImageResource(R.drawable.grayrank);
+        mTxvRank.setTextColor(material_grey_50);
+
+        mImagSetting.setImageResource(R.drawable.grayme);
+        mTxvSetting.setTextColor(material_grey_50);
     }
 }
