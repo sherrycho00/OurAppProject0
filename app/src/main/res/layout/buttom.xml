@@ -22,12 +22,13 @@
             <!--按钮上面显示的图片-->
             <ImageButton
                 android:id="@+id/home_img"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:src="@mipmap/ic_launcher" />
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/zhuye" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textSize="10.5sp"
                 android:text="首页"/>
 
         </LinearLayout>
@@ -44,12 +45,13 @@
             <!--按钮上面显示的图片-->
             <ImageButton
                 android:id="@+id/chat_img"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/chat" />
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/chat1" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textSize="10.5sp"
                 android:text="聊天"/>
 
         </LinearLayout>
@@ -65,12 +67,13 @@
             <!--按钮上面显示的图片-->
             <ImageButton
                 android:id="@+id/rank_img"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:src="@mipmap/ic_launcher" />
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/rank" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textSize="10.5sp"
                 android:text="排行榜"/>
 
         </LinearLayout>
@@ -86,12 +89,13 @@
             <!--按钮上面显示的图片-->
             <ImageButton
                 android:id="@+id/setting_img"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:src="@mipmap/ic_launcher" />
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/wo" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textSize="10.5sp"
                 android:text="个人设置"/>
 
         </LinearLayout>
