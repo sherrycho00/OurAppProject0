@@ -20,17 +20,16 @@
             android:gravity="center">
 
             <!--按钮上面显示的图片-->
-            <ImageView
+            <ImageButton
                 android:id="@+id/home_img"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:src="@drawable/login1" />
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/zhuye" />
             <TextView
-                android:id="@+id/home_txv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="首页"
-                android:textColor="@drawable/textcolor"/>
+                android:textSize="10.5sp"
+                android:text="首页"/>
 
         </LinearLayout>
 
@@ -44,15 +43,15 @@
             android:gravity="center">
 
             <!--按钮上面显示的图片-->
-            <ImageView
+            <ImageButton
                 android:id="@+id/chat_img"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/chat" />
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/chat1" />
             <TextView
-                android:id="@+id/chat_txv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textSize="10.5sp"
                 android:text="聊天"/>
 
         </LinearLayout>
@@ -66,15 +65,15 @@
             android:gravity="center">
 
             <!--按钮上面显示的图片-->
-            <ImageView
+            <ImageButton
                 android:id="@+id/rank_img"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:src="@mipmap/ic_launcher" />
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/rank" />
             <TextView
-                android:id="@+id/rank_txv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textSize="10.5sp"
                 android:text="排行榜"/>
 
         </LinearLayout>
@@ -88,15 +87,15 @@
             android:gravity="center">
 
             <!--按钮上面显示的图片-->
-            <ImageView
+            <ImageButton
                 android:id="@+id/setting_img"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:src="@mipmap/ic_launcher" />
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/wo" />
             <TextView
-                android:id="@+id/setting_txv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textSize="10.5sp"
                 android:text="个人设置"/>
 
         </LinearLayout>
