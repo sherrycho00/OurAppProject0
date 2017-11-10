@@ -9,16 +9,23 @@ import android.telecom.TelecomManager;
 import android.view.View;
 import android.view.Window;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-public class MainActivity extends FragmentActivity implements View.OnClickListener{
+import static com.example.elsie.framelayout.R.color.black;
+import static com.example.elsie.framelayout.R.color.blue;
+
+public class  MainActivity extends FragmentActivity implements View.OnClickListener{
 
 //    底部4个导航的控件
     private LinearLayout mTabHome,mTabChat,mTabRank,mTabSetting;
 
 //    底部4个导航控件中的图片按钮
-//    private ImageButton mImagHome,mImagChat,mImagRank,mImagSetting;
+    private ImageView mImagHome,mImagChat,mImagRank,mImagSetting;
+
+//    底部4个导航控件中图标上的文字
+    private TextView mTxvHome,mTxvChat,mTxvRank,mTxvSetting;
 
 //    初始化4个Fragment
     private android.support.v4.app.Fragment Home,Chat,Rank,Setting;
@@ -51,9 +58,17 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
         mTabRank = (LinearLayout)findViewById(R.id.tab_rank);
         mTabSetting = (LinearLayout)findViewById(R.id.tab_setting);
 
-//        获得图标上面的图片
+//        获得图标的图片
+        mImagHome = (ImageView) findViewById(R.id.home_img);
+        mImagChat = (ImageView) findViewById(R.id.chat_img);
+        mImagRank = (ImageView) findViewById(R.id.rank_img);
+        mImagSetting= (ImageView) findViewById(R.id.setting_img);
 
-//        mImagHome = (ImageButton)findViewById(R.id.home_img);
+//        获得图标文字
+        mTxvHome = (TextView) findViewById(R.id.home_txv);
+        mTxvChat = (TextView) findViewById(R.id.chat_txv);
+        mTxvRank = (TextView) findViewById(R.id.rank_txv);
+        mTxvSetting = (TextView) findViewById(R.id.setting_txv);
 
         
     }
@@ -66,32 +81,36 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
         mTabRank.setOnClickListener(this);
         mTabSetting.setOnClickListener(this);
 
-//        mImagHome.setOnClickListener(this);
+
 
     }
 
 //    对点击设立监听事件
     @Override
     public void onClick(View v) {
-//        点击图标后该图标发生变化
-//        resetImg();
+//        先将图片恢复之前状态
+        resetImg();
 
         switch (v.getId()){
             case R.id.tab_home:
                 setSelect(0);
-
+                mTxvHome.setTextColor(0xff1B940A);
+                mImagHome.setImageResource(R.drawable.hello);
                 break;
 
             case R.id.tab_chat:
                 setSelect(1);
+
                 break;
 
             case R.id.tab_rank:
                 setSelect(2);
+
                 break;
 
             case R.id.tab_setting:
                 setSelect(3);
+
                 break;
 
             default:
@@ -119,9 +138,6 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
                 } else {
                     transaction.show(Home);
                 }
-
-//                设置点击后图标图片的变化
-
                 break;
 
             case 1:
@@ -131,7 +147,6 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
                 }else{
                     transaction.show(Chat);
                 }
-
                 break;
 
             case 2:
@@ -141,7 +156,6 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
                 }else{
                     transaction.show(Rank);
                 }
-
                 break;
 
             case 3:
@@ -151,7 +165,6 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
                 }else {
                     transaction.show(Setting);
                 }
-
                 break;
 
             default:
@@ -159,7 +172,6 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
             }
 
             transaction.commit();
-
         }
 
 
@@ -187,5 +199,16 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
 
 //    点击后图标发生变化
     private void resetImg() {
+        mImagHome.setImageResource(R.drawable.login1);
+        mTxvHome.setTextColor(black);
+
+//        mImagChat.setImageResource();
+//        mTxvChat.setTextColor(black);
+//
+//        mImagRank.setImageResource();
+//        mTxvRank.setTextColor(black);
+//
+//        mImagSetting.setImageResource();
+//        mTxvSetting.setTextColor(black);
     }
 }
