@@ -100,11 +100,11 @@ public class  MainActivity extends FragmentActivity implements View.OnClickListe
                 mImagHome.setImageResource(R.drawable.home);
                 break;
 
-            case R.id.tab_chat:
-                setSelect(1);
-                mTxvChat.setTextColor(0xff1B940A);
-                mImagChat.setImageResource(R.drawable.chat);
-                break;
+//            case R.id.tab_chat:
+//                setSelect(1);
+//                mTxvChat.setTextColor(0xff1B940A);
+//                mImagChat.setImageResource(R.drawable.chat);
+//                break;
 
             case R.id.tab_rank:
                 setSelect(2);
