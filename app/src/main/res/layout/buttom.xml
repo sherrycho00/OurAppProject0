@@ -4,6 +4,7 @@
     android:layout_height="wrap_content"
     android:background="#ffffff">
 
+
     <!--用于显示底部的四个控件-->
     <LinearLayout
         android:layout_width="match_parent"
@@ -91,17 +92,17 @@
             android:gravity="center">
 
             <!--按钮上面显示的图片-->
-            <ImageView
-                android:id="@+id/setting_img"
-                android:layout_width="32dp"
-                android:layout_height="32dp"
-                android:src="@drawable/grayme" />
-            <TextView
-                android:id="@+id/setting_txv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="10.5sp"
-                android:text="个人设置"/>
+            <!--<ImageView-->
+                <!--android:id="@+id/setting_img"-->
+                <!--android:layout_width="32dp"-->
+                <!--android:layout_height="32dp"-->
+                <!--android:src="@drawable/grayme" />-->
+            <!--<TextView-->
+                <!--android:id="@+id/setting_txv"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:textSize="10.5sp"-->
+                <!--android:text="个人设置"/>-->
 
         </LinearLayout>
 
