@@ -204,8 +204,8 @@ public class  MainActivity extends FragmentActivity implements View.OnClickListe
 
 //    点击后图标发生变化
     private void resetImg() {
-        mImagHome.setImageResource(R.drawable.grayhome);
-        mTxvHome.setTextColor(material_grey_50);
+//        mImagHome.setImageResource(R.drawable.grayhome);
+//        mTxvHome.setTextColor(material_grey_50);
 
         mImagChat.setImageResource(R.drawable.graychat);
         mTxvChat.setTextColor(material_grey_50);
