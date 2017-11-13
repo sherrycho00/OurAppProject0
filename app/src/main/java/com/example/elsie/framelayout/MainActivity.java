@@ -1,6 +1,7 @@
 package com.example.elsie.framelayout;
 
 import android.app.Fragment;
+import android.graphics.Color;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
@@ -12,7 +13,9 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import static android.icu.lang.UCharacter.GraphemeClusterBreak.T;
 import static com.example.elsie.framelayout.R.color.black;
 import static com.example.elsie.framelayout.R.color.blue;
 import static com.example.elsie.framelayout.R.color.material_blue_grey_800;
@@ -147,7 +150,8 @@ public class  MainActivity extends FragmentActivity implements View.OnClickListe
 
             case 1:
                 if (Chat == null){
-                    Chat = new ChatFragment();
+                   Chat = new ChatFragment();
+                    Toast.makeText(MainActivity.this,"Hello",Toast.LENGTH_SHORT).show();
                     transaction.add(R.id.frameLayoutContent,Chat);
                 }else{
                     transaction.show(Chat);
@@ -211,7 +215,7 @@ public class  MainActivity extends FragmentActivity implements View.OnClickListe
         mTxvChat.setTextColor(material_grey_50);
 
         mImagRank.setImageResource(R.drawable.grayrank);
-        mTxvRank.setTextColor(material_grey_50);
+        mTxvRank.setTextColor(Color.parseColor("#808080"));
 
         mImagSetting.setImageResource(R.drawable.grayme);
         mTxvSetting.setTextColor(material_grey_50);

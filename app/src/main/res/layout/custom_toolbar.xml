@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--这个文件用来实现在聊天区域实现分类查看各种信息功能的菜单项-->
+    <android.support.v7.widget.Toolbar xmlns:android = "http://schemas.android.com/apk/res/android"
+    xmlns:app = "http://schemas.android.com/apk/res-auto"
+    android:id="@+id/tl_custom"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/colorPrimary"
+    android:minHeight="?attr/actionBarSize"
+    android:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+    app:theme="@style/ThemeOverlay.AppCompat.ActionBar"    >
+
+</android.support.v7.widget.Toolbar>
+
