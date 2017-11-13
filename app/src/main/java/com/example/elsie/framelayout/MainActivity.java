@@ -1,6 +1,7 @@
 package com.example.elsie.framelayout;
 
 import android.app.Fragment;
+import android.content.Intent;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
@@ -30,7 +31,10 @@ public class  MainActivity extends FragmentActivity implements View.OnClickListe
     private TextView mTxvHome,mTxvChat,mTxvRank,mTxvSetting;
 
 //    初始化4个Fragment
-    private android.support.v4.app.Fragment Home,Chat,Rank,Setting;
+    private android.support.v4.app.Fragment Home;
+    private ChatFragment Chat;
+    private android.support.v4.app.Fragment Rank;
+    private android.support.v4.app.Fragment Setting;
 
 
     @Override
@@ -148,7 +152,10 @@ public class  MainActivity extends FragmentActivity implements View.OnClickListe
             case 1:
                 if (Chat == null){
                     Chat = new ChatFragment();
+                    Intent intent=new Intent(MainActivity.this,ChatActivity.class);
+                    startActivity(intent);
                     transaction.add(R.id.frameLayoutContent,Chat);
+
                 }else{
                     transaction.show(Chat);
                 }
@@ -202,7 +209,7 @@ public class  MainActivity extends FragmentActivity implements View.OnClickListe
         }
     }
 
-//    点击后图标发生变化
+    //点击后图标发生变化
     private void resetImg() {
         mImagHome.setImageResource(R.drawable.grayhome);
         mTxvHome.setTextColor(material_grey_50);
