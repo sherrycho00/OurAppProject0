@@ -4,7 +4,6 @@
     android:layout_height="wrap_content"
     android:background="#ffffff">
 
-
     <!--用于显示底部的四个控件-->
     <LinearLayout
         android:layout_width="match_parent"
