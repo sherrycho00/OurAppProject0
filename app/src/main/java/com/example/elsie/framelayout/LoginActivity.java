@@ -7,6 +7,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
+import android.os.Environment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -14,8 +15,10 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.facebook.drawee.backends.pipeline.Fresco;
 import com.facebook.drawee.backends.pipeline.PipelineDraweeController;
 import com.facebook.drawee.interfaces.DraweeController;
@@ -23,6 +26,8 @@ import com.facebook.drawee.view.SimpleDraweeView;
 import com.facebook.imagepipeline.common.ResizeOptions;
 import com.facebook.imagepipeline.request.ImageRequest;
 import com.facebook.imagepipeline.request.ImageRequestBuilder;
+
+import java.io.File;
 
 public class LoginActivity extends FragmentActivity {
     private MySqliteHelper helper;
@@ -40,15 +45,40 @@ public class LoginActivity extends FragmentActivity {
         super.onCreate(savedInstanceState);
         Fresco.initialize(this);
         setContentView(R.layout.activity_login);
+
+        //用户已存在，直接登录
+
+
         //播放动图
-        SimpleDraweeView s = (SimpleDraweeView) this.findViewById(R.id.gif);
-        DraweeController mDraweeController = Fresco.newDraweeControllerBuilder()
-                .setAutoPlayAnimations(true)
-                //设置uri,加载本地的gif资源
-                .setUri(Uri.parse("res://" + getPackageName() + "/" + R.drawable.hello))//设置uri
-                .build();
-//设置Controller
-        s.setController(mDraweeController);
+        //com.facebook.drawee.view.SimpleDraweeView mGif=(com.facebook.drawee.view.SimpleDraweeView)findViewById(R.id.gif);
+        //ImageView imageView = (ImageView) findViewById(R.id.gif);
+        ImageView  iv = (ImageView)findViewById(R.id.gif);
+        ImageView  iv1 = (ImageView)findViewById(R.id.gif1);
+        ImageView  iv2 = (ImageView)findViewById(R.id.gif2);
+        //String   url = "res://" + getPackageName() + "/" + R.drawable.hello;
+        //String   url = "http://img.zcool.cn/community/01619357b185dc0000018c1b86ea68.gif";
+        //String   url = "http://img.mp.itc.cn/upload/20161106/ab60d2070c8a4b3c9c4c69e18d30a464_th.gif";
+        String url="http://img1.2345.com/duoteimg/qqbiaoqing/160812512480/23.gif";
+        //加载图片
+        //Glide.with(this).load(url).placeholder(R.mipmap.place).error(R.mipmap.icon_photo_error).into(mIv);
+        Glide.with(LoginActivity.this).load(url).into(iv);
+        Glide.with(LoginActivity.this).load(url).into(iv1);
+        Glide.with(LoginActivity.this).load(url).into(iv2);
+
+        //Glide.with(this).load(url).placeholder(R.mipmap.place).error(R.mipmap.icon_photo_error).into(mIv);//GlideApp.with(this).load("http://goo.gl/gEgYUd").into(imageView);
+//本地文件
+//        File file = new File(Environment.getExternalStorageDirectory(), "hello.gif");
+//        //加载图片
+//        Glide.with(this).load(file).into(iv);
+//        Glide.with(this).load(mGif).placeholder(R.mipmap.place).error(R.mipmap.icon_photo_error).into(mIv);
+//        SimpleDraweeView s = (SimpleDraweeView) this.findViewById(R.id.gif);
+//        DraweeController mDraweeController = Fresco.newDraweeControllerBuilder()
+//                .setAutoPlayAnimations(true)
+//                //设置uri,加载本地的gif资源
+//                .setUri(Uri.parse("res://" + getPackageName() + "/" + R.drawable.hello))//设置uri
+//                .build();
+////设置Controller
+//        s.setController(mDraweeController);
 
 
 

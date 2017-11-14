@@ -5,10 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <android.support.v7.widget.RecyclerView
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.v7.widget.RecyclerView
         android:id="@+id/chat_activity"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="match_parent"
         android:layout_weight="1"></android.support.v7.widget.RecyclerView>
 
     <android.support.design.widget.FloatingActionButton
@@ -20,5 +23,6 @@
         android:src="@drawable/chat_add_comment"
         app:elevation="8dp"
         />
+    </android.support.design.widget.CoordinatorLayout>
 
 </LinearLayout>

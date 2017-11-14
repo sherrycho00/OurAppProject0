@@ -22,13 +22,16 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ViewHolder> {
         TextView chat_name;
         TextView chat_time;
         TextView chat_content;
+
         LinearLayout chat_state_online;
         LinearLayout chat_state_offline;
+
         LinearLayout chat_label_dislike;
         LinearLayout chat_label_commend;
         LinearLayout chat_label_date;
         LinearLayout chat_label_find;
         LinearLayout chat_label_else;
+
         LinearLayout chat_like;
         LinearLayout chat_no_like;
         LinearLayout chat_comment;
